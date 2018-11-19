@@ -1,3 +1,9 @@
+body{
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+
 hr {
   display: block;
   margin-top: 0.5em;
@@ -13,8 +19,13 @@ div{
 }
 
 img{
-  max-width: 100%
+  max-width: 100%;
   height: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1px solid red;
+  margin: auto;
+
 }
 
 .call-outs-container{
@@ -23,9 +34,9 @@ img{
 }
 
 .call-out{
-  padding: 20px;
+  padding: 5px;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   flex-basis: 24%;
 }
 @media (min-width: 900px){
@@ -42,35 +53,40 @@ img{
 
 .equal-height-container {
   max-width: 100%;
-  margin: 0 auto;
+  margin: 0 0;
   display: flex;
 }
 
 .first{
   background-color: #fff;
-  padding: 20px;
+  padding: 1px;
   flex: 1;
 }
 
 .second {
   background-color: yellow;
-  flex: 1;
+  flex: 5;
   display: flex;
   flex-direction: column;
 }
 
 .second-a{
   background-color: #c0dbe2;
-  flex:1;
+  flex:2;
 }
 .second-b{
   background-color: #cdf1c3;
-  flex:1;
+  flex:2;
 }
 
 .second-c{
   background-color: #ccb9da;
-  flex:1;
+  flex:2;
+}
+
+.second-d{
+  background-color: #c0dbe2;
+  flex:2;
 }
 
 #grid{
@@ -79,9 +95,7 @@ img{
   grid-template-columns: 1fr 2fr;
 }
 
-div{
-  font-size: 20px;
-}
+
 
 .box{
   max-width: 50%;
