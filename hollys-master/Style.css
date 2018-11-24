@@ -1,0 +1,33 @@
+body{
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+#productimage{
+  float: left; width: 20%, 
+}
+
+#company{
+  float: left; width: 30%; height: auto;
+}
+
+#price{
+  float: left; width: 25%; height: auto;
+}
+
+#link{
+  float: left; width: 25%; height: auto;
+}
+
+img { max-width: 100px; height: auto; }
+
+#line {
+  width: 100%; white-space:nowrap; overflow:hidden;
+}
+
+#pricecompare {
+  float: left;
+  width: 80%;
+}
+
+

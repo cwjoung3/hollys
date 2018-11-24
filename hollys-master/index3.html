@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="Style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Jikgu1</title>
+</head>
+<body>
+
+  <div id="container">
+  </div>
+
+
+  <script>
+      $(document).ready(function() {
+        $('#container').append(function() {
+          $.getJSON('example.json', function(data) {
+            var html = '';
+            $.each(data, function(entryIndex, entry) {
+              html += '<div id="line"><div id="productimage"><span><img src="' + entry.productname + '"></span></div>';
+
+              $.each(this.list, function(){
+              html += '<div id="pricecompare"> <div id="company"><span><img src="' + this.company + '"></span></div>';
+              html += '<div id="price"><span>' + this.price + '</span></div>';
+              html += '<div id="link"><span>' + this.link + '</span></div></div>';
+              })
+              html += '</div>';  
+            });
+            console.log(html);
+            $('#container').html(html);
+          });
+          return false;
+        });
+      });
+        </script>
+    
+  
+</body>
+</html>
+
+<!-- json 데이터를 가져온다고 예상할때 -->
+<!-- 필요한 데이터, 상품명, 회사명, 가격, 링크-->
+<!-- json 데이터 파일을 html로 자동으로 쭉 파싱하는법-->
+<!-- CSS는 알아서 맞게 이쁘게 고치면댐-->
